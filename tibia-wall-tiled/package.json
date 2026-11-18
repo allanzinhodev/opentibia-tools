@@ -1,0 +1,11 @@
+{
+  "name": "tibia-wall-tiled",
+  "displayName": "Tibia Wall Tiled Mode",
+  "description": "Preview tipo Tiled Mode para paredes do Tibia: repete o sprite a cada 32px (ancora no canto inferior direito, direita/baixo por cima) e permite pintar nas emendas.",
+  "version": "1.0.0",
+  "author": { "name": "Allan" },
+  "publisher": "allan",
+  "license": "MIT",
+  "categories": ["Scripts"],
+  "contributes": { "scripts": [{ "path": "./plugin.lua" }] }
+}

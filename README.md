@@ -35,6 +35,14 @@ Recolor a sprite sheet using only the colors found in a reference image, or choo
 
 ---
 
+### 🧱 Tibia Wall Tiled Mode
+
+A Tiled Mode preview for Tibia walls. Aseprite's own Tiled Mode repeats the whole canvas. This extension repeats the sprite, or only the selected tile, every 32 px in X and Y, anchored at the bottom-right with the right/bottom copy on top, like the Tibia client. You can paint across the seams and pick colors with the eyedropper (`Alt+click`) right in the preview.
+
+**Install:** double-click [`tibia-wall-tiled/tibia-wall-tiled.aseprite-extension`](tibia-wall-tiled/tibia-wall-tiled.aseprite-extension), then open `View > Tibia Wall Tiled Mode...`. Details in [`tibia-wall-tiled/README.md`](tibia-wall-tiled/README.md).
+
+---
+
 ## Requirements
 
 - [Aseprite](https://www.aseprite.org/) (with scripting enabled)
