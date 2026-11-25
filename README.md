@@ -57,6 +57,22 @@ Turns a Tibia outfit sprite sheet (1024x3072) into an editable file and back. Th
 
 ---
 
+### Gerar Mascara
+
+Builds an outfit mask from palette colors. Pixels of the chosen colors on the active layer lose their saturation and get 10% lighter, and a copy of them is painted 64 px to the right in the mask color: yellow `#FFFF00`, green `#00FF00`, red `#FF0000` or blue `#0000FF`.
+
+**Install:** Copy [`Gerar Mascara.lua`](Gerar%20Mascara.lua) into the folder opened by `File > Scripts > Open Scripts Folder`, then select `File > Scripts > Rescan Scripts Folder`. Works in RGB and Indexed modes. Tested with Aseprite 1.3.18.6.
+
+**How to use:**
+
+1. Run `File > Scripts > Gerar Mascara`. The window stays open.
+2. Select colors in the palette (`Ctrl`/`Shift`+click) and click **Usar seleção da paleta**. Click a color in the window to remove it.
+3. Pick the mask color and click **Aplicar**. Run it again for each part with a different mask color. **Ctrl+Z** undoes each run.
+
+Options: lightening amount, X offset (64 by default), current frame or all frames, and mask on the same layer or on a separate layer (created if missing). Mask pixels that would fall outside the canvas are skipped and counted. In Indexed mode, missing colors are added to the palette.
+
+---
+
 ## Requirements
 
 - [Aseprite](https://www.aseprite.org/) (with scripting enabled)
