@@ -43,6 +43,36 @@ A Tiled Mode preview for Tibia walls. Aseprite's own Tiled Mode repeats the whol
 
 ---
 
+### Montar Outfit
+
+Turns a Tibia outfit sprite sheet (1024x3072) into an editable file and back. The sheet holds 16 frames x 6 categories (Personagem, Addon 1, Addon 2, and the three mounted versions). Each category/frame is a 512x64 strip with North, East, South and West, each sprite followed by its mask, and two strips per row.
+
+**Install:** Copy [`Montar Outfit.lua`](Montar%20Outfit.lua) into the folder opened by `File > Scripts > Open Scripts Folder`, then select `File > Scripts > Rescan Scripts Folder`. Tested with Aseprite 1.3.18.6.
+
+**How to use:**
+
+1. Open the 1024x3072 sheet and run `File > Scripts > Montar Outfit`.
+2. Pick **Montar arquivo de edição** and the sheet order (**6 categorias por frame** or **16 frames por categoria**). A new 256x64 file opens with 16 frames (tags `Idle` 1-8 and `walk` 9-16), 6 layers (sprite and mask for each part, masks shown in Multiply at 90%) and 4 columns: Norte, Sul, Norte Montado, Sul Montado.
+3. Edit it, then run the script again with **Montar Spritesheet** to rebuild the 1024x3072 sheet. East and West are generated from South and North (vertical flip + 90° clockwise rotation of each 64x64 cell).
+
+---
+
+### Gerar Mascara
+
+Builds an outfit mask from palette colors. Pixels of the chosen colors on the active layer lose their saturation and get 10% lighter, and a copy of them is painted 64 px to the right in the mask color: yellow `#FFFF00`, green `#00FF00`, red `#FF0000` or blue `#0000FF`.
+
+**Install:** Copy [`Gerar Mascara.lua`](Gerar%20Mascara.lua) into the folder opened by `File > Scripts > Open Scripts Folder`, then select `File > Scripts > Rescan Scripts Folder`. Works in RGB and Indexed modes. Tested with Aseprite 1.3.18.6.
+
+**How to use:**
+
+1. Run `File > Scripts > Gerar Mascara`. The window stays open.
+2. Select colors in the palette (`Ctrl`/`Shift`+click) and click **Usar seleção da paleta**. Click a color in the window to remove it.
+3. Pick the mask color and click **Aplicar**. Run it again for each part with a different mask color. **Ctrl+Z** undoes each run.
+
+Options: lightening amount, X offset (64 by default), current frame or all frames, and mask on the same layer or on a separate layer (created if missing). Mask pixels that would fall outside the canvas are skipped and counted. In Indexed mode, missing colors are added to the palette.
+
+---
+
 ## Requirements
 
 - [Aseprite](https://www.aseprite.org/) (with scripting enabled)
