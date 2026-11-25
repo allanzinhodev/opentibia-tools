@@ -43,6 +43,20 @@ A Tiled Mode preview for Tibia walls. Aseprite's own Tiled Mode repeats the whol
 
 ---
 
+### Montar Outfit
+
+Turns a Tibia outfit sprite sheet (1024x3072) into an editable file and back. The sheet holds 16 frames x 6 categories (Personagem, Addon 1, Addon 2, and the three mounted versions). Each category/frame is a 512x64 strip with North, East, South and West, each sprite followed by its mask, and two strips per row.
+
+**Install:** Copy [`Montar Outfit.lua`](Montar%20Outfit.lua) into the folder opened by `File > Scripts > Open Scripts Folder`, then select `File > Scripts > Rescan Scripts Folder`. Tested with Aseprite 1.3.18.6.
+
+**How to use:**
+
+1. Open the 1024x3072 sheet and run `File > Scripts > Montar Outfit`.
+2. Pick **Montar arquivo de edição** and the sheet order (**6 categorias por frame** or **16 frames por categoria**). A new 256x64 file opens with 16 frames (tags `Idle` 1-8 and `walk` 9-16), 6 layers (sprite and mask for each part, masks shown in Multiply at 90%) and 4 columns: Norte, Sul, Norte Montado, Sul Montado.
+3. Edit it, then run the script again with **Montar Spritesheet** to rebuild the 1024x3072 sheet. East and West are generated from South and North (vertical flip + 90° clockwise rotation of each 64x64 cell).
+
+---
+
 ## Requirements
 
 - [Aseprite](https://www.aseprite.org/) (with scripting enabled)
